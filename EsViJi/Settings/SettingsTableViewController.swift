@@ -32,7 +32,7 @@ class SettingsDataSource: UITableViewDiffableDataSource<SettingSection, SettingI
     }
 }
 
-struct SettingsData {
+class SettingsData {
     var defaultBackground: UIColor? = .red
     var darkModeArtboard: Bool = true
 }
@@ -53,7 +53,7 @@ class BackgroundColorCell: UITableViewCell, SettingsCell {
 
     func setupView() {
 
-        addSubview(colorView)
+        contentView.addSubview(colorView)
         colorView.translatesAutoresizingMaskIntoConstraints = false
         colorView.backgroundColor = .tertiarySystemGroupedBackground
         colorView.layer.cornerRadius = 12
@@ -83,9 +83,9 @@ class SettingsTableViewController: UITableViewController {
     var settingsData = SettingsData()
 
     lazy var dataSource = SettingsDataSource(tableView: tableView) { tableView, indexPath, itemIdentifier in
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: itemIdentifier.reuseIdentifier) as? SettingsCell else {
-            return UITableViewCell()
-        }
+        guard let cell = tableView
+                .dequeueReusableCell(withIdentifier: itemIdentifier.reuseIdentifier) as? SettingsCell
+        else { return UITableViewCell() }
 
         cell.configure(with: self.settingsData)
 

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F15B89B327232B5800B59AD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B89B227232B5800B59AD5 /* ViewController.swift */; };
+		F10F6974272686F200104970 /* DocumentsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F6973272686F200104970 /* DocumentsCollectionViewController.swift */; };
+		F10F69762726910600104970 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F69752726910600104970 /* EditorViewController.swift */; };
+		F10F6978272696DE00104970 /* LayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F6977272696DE00104970 /* LayersTableViewController.swift */; };
+		F15B89B327232B5800B59AD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B89B227232B5800B59AD5 /* MainViewController.swift */; };
 		F15B89B527232FA900B59AD5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B89B427232FA900B59AD5 /* SettingsTableViewController.swift */; };
+		F1B012802729AC4F00E47F8D /* LayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B0127F2729AC4F00E47F8D /* LayerCell.swift */; };
+		F1B012822729AC6700E47F8D /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B012812729AC6700E47F8D /* Layer.swift */; };
 		F1B0515C2711C0BC008C6F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B0515B2711C0BC008C6F38 /* AppDelegate.swift */; };
 		F1B0515E2711C0BC008C6F38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B0515D2711C0BC008C6F38 /* SceneDelegate.swift */; };
 		F1B051652711C0BE008C6F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B051642711C0BE008C6F38 /* Assets.xcassets */; };
@@ -16,8 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F15B89B227232B5800B59AD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F10F6973272686F200104970 /* DocumentsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsCollectionViewController.swift; sourceTree = "<group>"; };
+		F10F69752726910600104970 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		F10F6977272696DE00104970 /* LayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersTableViewController.swift; sourceTree = "<group>"; };
+		F15B89B227232B5800B59AD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F15B89B427232FA900B59AD5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		F1B0127F2729AC4F00E47F8D /* LayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCell.swift; sourceTree = "<group>"; };
+		F1B012812729AC6700E47F8D /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		F1B051582711C0BC008C6F38 /* EsViJi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsViJi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B0515B2711C0BC008C6F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B0515D2711C0BC008C6F38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F10F6970272686BD00104970 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F15B89B427232FA900B59AD5 /* SettingsTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F10F6971272686C100104970 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				F10F6973272686F200104970 /* DocumentsCollectionViewController.swift */,
+				F10F69752726910600104970 /* EditorViewController.swift */,
+				F10F6977272696DE00104970 /* LayersTableViewController.swift */,
+				F1B0127F2729AC4F00E47F8D /* LayerCell.swift */,
+				F1B012812729AC6700E47F8D /* Layer.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		F10F6972272686C500104970 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F1B0515B2711C0BC008C6F38 /* AppDelegate.swift */,
+				F1B0515D2711C0BC008C6F38 /* SceneDelegate.swift */,
+				F15B89B227232B5800B59AD5 /* MainViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		F1B0514F2711C0BC008C6F38 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +96,9 @@
 		F1B0515A2711C0BC008C6F38 /* EsViJi */ = {
 			isa = PBXGroup;
 			children = (
-				F1B0515B2711C0BC008C6F38 /* AppDelegate.swift */,
-				F1B0515D2711C0BC008C6F38 /* SceneDelegate.swift */,
-				F15B89B227232B5800B59AD5 /* ViewController.swift */,
-				F15B89B427232FA900B59AD5 /* SettingsTableViewController.swift */,
+				F10F6972272686C500104970 /* Core */,
+				F10F6971272686C100104970 /* Documents */,
+				F10F6970272686BD00104970 /* Settings */,
 				F1B051642711C0BE008C6F38 /* Assets.xcassets */,
 				F1B051662711C0BE008C6F38 /* LaunchScreen.storyboard */,
 				F1B051692711C0BE008C6F38 /* Info.plist */,
@@ -138,9 +177,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15B89B527232FA900B59AD5 /* SettingsTableViewController.swift in Sources */,
-				F15B89B327232B5800B59AD5 /* ViewController.swift in Sources */,
+				F10F69762726910600104970 /* EditorViewController.swift in Sources */,
+				F15B89B327232B5800B59AD5 /* MainViewController.swift in Sources */,
+				F10F6974272686F200104970 /* DocumentsCollectionViewController.swift in Sources */,
+				F10F6978272696DE00104970 /* LayersTableViewController.swift in Sources */,
 				F1B0515C2711C0BC008C6F38 /* AppDelegate.swift in Sources */,
+				F1B012822729AC6700E47F8D /* Layer.swift in Sources */,
 				F1B0515E2711C0BC008C6F38 /* SceneDelegate.swift in Sources */,
+				F1B012802729AC4F00E47F8D /* LayerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

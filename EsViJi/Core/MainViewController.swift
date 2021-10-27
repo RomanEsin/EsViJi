@@ -35,12 +35,12 @@ class NavigationController: UINavigationController {
     }
 }
 
-class ViewController: UITabBarController {
+class MainViewController: UITabBarController {
 
     lazy var tabControllers = [
         TabViewController(title: "Documents",
                           imageName: "doc.text",
-                          controller: NavigationController(rootViewController: UIViewController())),
+                          controller: NavigationController(rootViewController: DocumentsCollectionViewController())),
         TabViewController(title: "Settings",
                           imageName: "gearshape",
                           controller: NavigationController(rootViewController: SettingsTableViewController()))
